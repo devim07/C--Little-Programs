@@ -1,0 +1,27 @@
+//Accept a value from user and print that many lines of Pascals triangle
+
+#include <stdio.h>
+int main()
+{
+    int x, i, j, s, o[20]={1},n[20]={1,1};
+    printf("Enter a value: ");
+    scanf("%d", &x);
+    printf("The first %d lines of Pascals Triangle are-\n", x);
+    for(i=1; i<=x;i++)
+    {
+        for(s=x-i; s>=1; s--)
+            printf("   ");    
+        for(j=0; j<=i; j++)
+        {
+            printf("%d     ", n[j]);
+            o[j]=n[j];
+        }
+        for(s=1; s<=i+1; s++)
+        {
+            n[s]=o[s-1]+o[s];
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
