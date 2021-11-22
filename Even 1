@@ -1,0 +1,27 @@
+//Accept a number from user and print that many even number after the number. 
+//Eg, input 4. O/P: 6 8 10 12
+
+#include <stdio.h>
+void even(int);
+int main()
+{
+    int x;
+    printf("Enter a number: ");
+    scanf("%d", &x);
+    printf("%d odd numbers after number %d are as follows \n", x,x);
+    if(x%2==0)
+        even(x);
+    else
+        even(x+1);
+    return 0;
+}
+
+void even(int a)
+{
+    int b=a;
+    for(int i=1; i<=a; i++)
+    {
+        printf("%d\t", b);
+        b+=2;
+    }
+}
