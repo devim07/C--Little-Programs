@@ -1,0 +1,16 @@
+//Find the sum of digits of a multi digit number
+#include <stdio.h>
+int main()
+{
+    int x, sum=0;
+    printf("Enter a multi digit number: ");
+    scanf("%d", &x);
+    int n=x;
+    while (n>0)
+    {
+        sum+=(n%10);
+        n/=10;
+    }
+    printf("The sum of digits in %d is %d", x, sum);
+    return 0;
+}
