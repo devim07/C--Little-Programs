@@ -1,0 +1,12 @@
+//Accept a number from the user and print its factorial
+#include <stdio.h>
+int main()
+{
+    int i, x, f=1;
+    printf("Enter any number: ");
+    scanf("%d", &x);
+    for(i=2; i<=x; i++)
+        f*=i;
+    printf("The factorial of %d is %d", x, f);
+    return 0;
+}
