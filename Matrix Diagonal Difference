@@ -1,0 +1,40 @@
+//Diagonal difference of any matrix
+#include <stdio.h>
+int diagonalDifference(int, int, int[][10]);
+int main()
+{
+    int i,j, row, col, arr[10][10];
+    printf("Enter the number of rows or columns: ");
+    scanf("%d", &row);
+    col=row;
+    for(i=0; i<row; i++)
+    {
+        for(j=0; j<col; j++)
+            scanf("%d", &arr[i][j]);
+    }
+    printf("%d", diagonalDifference(row, col, arr));
+    return 0;
+}
+
+int diagonalDifference(int arr_rows, int arr_columns, int arr[][10]) 
+{
+    int i,j, d1=0, d2=0;
+    for(i=0; i<arr_rows; i++)
+    {
+        for(j=0; j<arr_columns;j++)
+        {
+            if (i==(arr_columns-j-1))
+            {
+                d2+=arr[i][j];
+            }
+        if (i==j)
+            d1+=arr[i][j];
+        }
+    }
+    int ans=d1-d2;
+    if(ans>=0)
+        return ans;
+    else 
+        return (-ans);
+    
+}
