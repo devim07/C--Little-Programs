@@ -1,0 +1,24 @@
+//find the highest number from 10 numbers gien by user. (Dont use array).
+#include <stdio.h>
+int max(int,int);
+int main()
+{
+    int x, y,m,i;
+    printf("Enter 10 numbers \n");
+    scanf("%d", &m);
+    for (i=2; i<=10; i++)
+    {
+        scanf("%d", &x);
+        m=max(m,x);
+    }
+    printf("The highest number is %d", m);
+    return 0;
+}
+
+int max (int a, int b)
+{
+    if (a>=b) 
+        return a;
+    else
+        return b;
+}
