@@ -1,0 +1,16 @@
+//Sum of set of numbers without array
+#include <stdio.h>
+int main()
+{
+    int i, x, s=0, c;
+    printf("Enter the total count: ");
+    scanf("%d", &c);
+    printf("Enter the numbers: ");
+    for(i=1; i<c; i++)
+    {
+        scanf("%d ", &x);
+        s+=x;
+    }
+    printf("the sum of the numbers enterd is %d", s);
+    return 0;
+}
