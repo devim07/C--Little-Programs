@@ -1,0 +1,21 @@
+//Saving odd numbers in an array in different block
+#include<stdio.h>
+int main()
+{
+    int n, i, j=0, arr[20], copy[20];
+    printf("Enter the numbers of elements in array: ");
+    scanf("%d", &n);
+    printf("Enter the elements of the array: ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d", &arr[i]);
+        if(arr[i]%2!=0)
+        {
+            copy[j]=arr[i];
+            j++;
+        }
+    }
+    printf("The odd numbers are: ");
+    for(i=0; i<j; i++)
+        printf("%d  ", copy[i]);
+}
