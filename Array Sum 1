@@ -1,0 +1,30 @@
+//max and min sum of array by ignoring one element
+/*Given five positive integers, find the minimum and maximum values 
+that can be calculated by summing exactly four of the five integers. 
+Then print the respective minimum and maximum values */
+
+#include<stdio.h>
+void miniMaxSum(int arr_count, int* arr) 
+{
+    long int fsum=0;
+    for(int i =0; i<arr_count; i++)
+        fsum+=arr[i];
+    long int max=0, min=fsum, sum;
+    for(int i =0; i<arr_count; i++)
+    {
+        sum=fsum-arr[i];
+        if(max<sum)
+            max=sum;
+        if(min>sum)
+            min=sum;
+    }
+    printf("%ld %ld", min, max);
+}
+int main()
+{
+    int i, arr[5];
+    printf("Enter the 5 numbers\n");
+    for(i=0; i<5; i++)
+        scanf("%d", &arr[i]);
+    miniMaxSum(5, arr);
+}
