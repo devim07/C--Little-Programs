@@ -1,0 +1,27 @@
+/*
+     #
+    ##
+   ###
+  ####
+  */
+#include<stdio.h>
+void staircase(int n) 
+{
+    int i,j, s;
+    for(i=1; i<=n; i++)
+    {
+        for(s=i; s<n; s++)
+            printf(" ");
+        for(j=1;j<=i; j++)
+            printf("#");
+        printf("\n");
+    }
+}
+int main()
+{
+    int n;
+    printf("Eneter the number of stairs:");
+    scanf("%d", &n);
+    staircase(n);
+}
+  
