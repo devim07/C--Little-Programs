@@ -1,0 +1,27 @@
+// Print the highest and 2nd highest number without using array
+#include <stdio.h>
+int main()
+{
+    int n, m1, m2, x,i;
+    printf("Enter the total numbers: ");
+    scanf("%d", &n);
+    printf("Enter the numbers: ");
+    scanf("%d %d", &m1, &m2);
+    if(m2>m1)
+    {
+        x=m1;
+        m1=m2;
+        m2=x;
+    }
+    for(i=3;i<=n; i++)
+    {
+        scanf("%d", &x);
+        if(m1<x)
+        {
+            m2=m1;
+            m1=x;
+        }
+    }
+    printf("The highest no is %d \nThe 2nd highest number is %d", m1, m2);
+    return 0;
+}
