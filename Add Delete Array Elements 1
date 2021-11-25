@@ -1,0 +1,60 @@
+#include <stdio.h>
+void add(int [],int *, int, int);
+void display(int [],int);
+void delete(int [],int *, int, int);
+int main()
+{
+    int arr[20], n, i, x, in;
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the %d elements: ", n);
+    for(i=0; i<n; i++)
+        scanf("%d ", &arr[i]);
+    printf("Enter the number to be added and the position: ");
+    scanf("%d %d", &x, & in);
+    add(arr, &n, x, in);
+    display(arr, n);
+    delete(arr, &n, x, in);
+    display(arr, n);
+    
+    return 0;
+}
+
+void add(int a[],int *p, int x, int in)
+{
+    int n=*p, temp, t;
+    for(int i=0; i<=n; i++)
+    {
+        if(i=in)
+        {
+            temp=a[i];
+            a[i]=x;
+        }
+        if(i>in)
+        {
+            t= a[i];
+            a[i]=temp;
+            temp=t;
+        }
+        
+    }
+}
+
+void delete(int a[],int *p, int x, int in)
+{
+    int n=*p;
+    for(int i=0; i<=n; i++)
+    {
+        if(i>in)
+        {
+            a[i]=a[i+1];
+        }
+        
+    }
+}
+
+void display(int a[],int n)
+{
+    for(int i=0; i<n; i++)
+        printf("%d  ", a[i]);
+}
