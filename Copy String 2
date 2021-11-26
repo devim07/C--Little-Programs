@@ -1,0 +1,20 @@
+//Copy one string into other using pointer
+#include <stdio.h>
+#include <string.h>
+void copy(char *, char *);
+int main()
+{
+    char n1[10], n2[10];
+    printf("Enter the string: ");
+    scanf("%s", n1);
+    copy(n1, n2);
+    printf("%s", n2);
+    return 0;
+}
+
+void copy(char *s1, char *s2)
+{
+    int i, n=strlen(s1);
+    for(i=0; i<=n; i++)
+        *(s2+i)=*(s1+i);
+}
