@@ -1,0 +1,20 @@
+//Accept a name, accept a character and count occurrence of that character
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[30], ch;
+    int i,n,num=0;
+    printf("Enter any string: ");
+    gets(str);
+    n=strlen(str);
+    printf("Enter any character: ");
+    scanf("%c", &ch);
+    for(i=0; i<strlen(str); i++)
+    {
+        if(str[i]==ch)
+            num++;
+    }
+    printf("The charcter '%c' occurs in the string %d times.", ch, num);
+    return 0;
+}
