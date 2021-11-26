@@ -1,4 +1,4 @@
-//Compairing two strings
+//Compairing two strings using arrays to function
 #include <stdio.h>
 #include <string.h>
 void cmp (char [],char []);
