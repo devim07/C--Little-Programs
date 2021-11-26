@@ -1,0 +1,27 @@
+//Accept a sentence and word from user and count occurrence of that word
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[50], find[10];
+    int i,j, n,m, num=0;
+    printf("Enter any string: ");
+    gets(str);
+    n=strlen(str);
+    printf("Enter the word to be found: ");
+    scanf("%s", find);
+    m=strlen(find);
+    for(i=0; i<=n; i++)
+    {
+        for(j=0; j<m; j++)
+        {
+            if(str[i+j]!=find[j])
+                break;
+            num++;
+        }
+        if(str[i]!=' ')
+            continue;
+    }
+    printf("The word '%s' occurs in the string %d times", find, num/m);
+    return 0;
+}
