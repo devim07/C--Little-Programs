@@ -1,0 +1,27 @@
+//shifting array to left
+#include <stdio.h>
+void left(int [], int);
+int main()
+{
+    int i, a[10], n, temp;
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the %d elements: ", n);
+    for(i=0; i<n; i++)
+        scanf("%d ", &a[i]);
+    printf("The array with 1 left shift is: ");
+    left(a, n);
+    printf("\nThe array with 2 left shift is: ");
+    left(a, n);
+    return 0;
+}
+
+void left(int a[], int n)
+{
+    int temp=a[0], i;
+    for(i=0; i<n-1; i++)
+        a[i]=a[i+1];
+    a[i]=temp;
+    for(i=0; i<n; i++)
+        printf("%d  ", a[i]);
+}
