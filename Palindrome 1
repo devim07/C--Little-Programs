@@ -1,0 +1,24 @@
+//Accept a name and check if it is palindrome or not
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char str[30], ch;
+    int i, n, f=0;
+    printf("Enter any string: ");
+    gets(str);
+    n=strlen(str);
+    for(i=0; i<n/2; i++)
+    {
+        if(str[i]!=str[n-i-1])
+        {
+            f++;
+            break;
+        }
+    }
+    if(f==0)
+        printf("The entered string is a palindrome");
+    else
+        printf("The entered string is not a palindrome");
+    return 0;
+}
