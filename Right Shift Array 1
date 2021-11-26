@@ -1,0 +1,17 @@
+//shifting array to right
+#include <stdio.h>
+void right(int [], int);
+int main()
+{
+    int i, a[10], n, temp;
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+    printf("Enter the %d elements: ", n);
+    for(i=0; i<n; i++)
+        scanf("%d ", &a[i]);
+    printf("The array with 1 right shift is: ");
+    right(a, n);
+    printf("\nThe array with 2 right shift is: ");
+    right(a, n);
+    return 0;
+}
