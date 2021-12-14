@@ -1,0 +1,28 @@
+/*Accept a 3x3 matrix and print elements as follows
+      3 
+   5 
+7      */
+#include<stdio.h>
+int main()
+{
+    int i,j;
+	int arr[3][3], r[3];
+	printf("Enter the 9 elements: ");
+	for(i=0;i<3;i++)
+	{
+	    for(j=0; j<3; j++)
+	        scanf("%d",&arr[i][j]);
+	}
+	for(i=0;i<3;i++)
+	{
+	    for(j=0; j<3; j++)
+	        {
+	            if(i==(2-j))
+	                printf("%d  ", arr[i][j]);
+                else
+                    printf("   ");
+	        }
+        printf("\n");
+	}
+	return 0;
+}
