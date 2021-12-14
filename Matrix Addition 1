@@ -1,0 +1,31 @@
+//Row wise addition. Sum of elements in a row of a mtrix
+#include<stdio.h>
+void sum(int a[][4], int r[]);
+int main()
+{
+    int i,j;
+	int arr[4][4], r[4];
+	printf("Enter the 16 elements: ");
+	for(i=0;i<=3;i++)
+	{
+	    for(j=0; j<=3; j++)
+	        scanf("%d",&arr[i][j]);
+	}
+	sum(arr, r);
+	printf("The sum of the row elements are:");
+	for(i=0; i<4; i++)
+	    printf("%d\t",r[i]);
+	return 0;
+}
+
+void sum (int a[][4],int r[])
+{
+    int s, i,j;
+    for(i=0;i<=3;i++)
+	{
+	    s=0;
+	    for(j=0; j<=3; j++)
+	        s+=a[i][j];
+	    r[i]=s;
+	}
+}
