@@ -1,0 +1,26 @@
+//Accept data in 3*3 matrix and print using display function
+#include <stdio.h>
+void display(int arr[][3]);
+int main()
+{
+    int i, j, a[3][3];
+    printf("Enter the 9 elements: ");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            scanf("%d", &a[i][j]);
+    }
+    display(a);
+    return 0;
+}
+void display (int arr[][3])
+{
+    int i, j;
+    printf("The 3x3 matrix is \n");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            printf("%d\t", arr[i][j]);
+        printf("\n");
+    }
+}
