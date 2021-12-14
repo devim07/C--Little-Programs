@@ -1,0 +1,32 @@
+//Accept data in 3*3 matrix and print column wise sum using function 
+//and store column wise sum in another array.
+#include<stdio.h>
+void sum(int a[][3], int r[]);
+int main()
+{
+    int i,j;
+	int arr[3][3], r[3];
+	printf("Enter the 9 elements: ");
+	for(i=0;i<3;i++)
+	{
+	    for(j=0; j<3; j++)
+	        scanf("%d",&arr[i][j]);
+	}
+	sum(arr, r);
+	printf("The sum of the column elements are:");
+	for(i=0; i<3; i++)
+	    printf("%d\t",r[i]);
+	return 0;
+}
+
+void sum (int a[][3],int r[])
+{
+    int s, i,j;
+    for(j=0;j<3;j++)
+	{
+	    s=0;
+	    for(i=0; i<3; i++)
+	        s+=a[i][j];
+	    r[j]=s;
+	}
+}
