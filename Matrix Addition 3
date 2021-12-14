@@ -1,0 +1,26 @@
+/*Accept data in 3*3 matrix and do the sum of all element using function 
+and let function return sum*/
+#include <stdio.h>
+int sum(int arr[][3]);
+int main()
+{
+    int i, j, a[3][3];
+    printf("Enter the 9 elements: ");
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            scanf("%d", &a[i][j]);
+    }
+    printf("The sum of elements in the matrix = %d",sum(a));
+    return 0;
+}
+int sum (int arr[][3])
+{
+    int i, j, s=0;
+    for(i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+            s+=arr[i][j];
+    }
+    return s;
+}
