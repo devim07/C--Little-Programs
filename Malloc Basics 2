@@ -1,4 +1,4 @@
-//accepting 2d array using malloc
+//accepting 2d array using malloc when row number is known
 #include <stdio.h>
 #include <malloc.h>
 int main()
