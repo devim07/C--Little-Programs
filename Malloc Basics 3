@@ -1,0 +1,25 @@
+//accepting 2d array using malloc where column number is known
+#include <stdio.h>
+#include <malloc.h>
+int main()
+{
+    int (*p)[3];
+ //array of pointer pointing to fixed column row is dynamic
+	int i,j, r;
+    printf("enter number of row");
+    scanf("%d",&r);//3
+	p=(int (*)[3]) malloc(r*sizeof(int [3]));
+
+	for(i=0;i<r;i++)
+	{
+	    for(j=0;j<3;j++)
+		    scanf("%d",&p[i][j]);
+	}
+	for(i=0;i<r;i++)
+	{
+	    for(j=0;j<3;j++)
+	        printf("%d",p[i][j]);
+		printf("\n");
+	}
+	return 0;
+}
