@@ -1,0 +1,17 @@
+//Malloc basics
+#include <stdio.h>
+#include <malloc.h>
+int main()
+{
+    int *ptr=NULL, i, req;
+    printf("Enter the required numbers: ");
+    scanf("%d", &req);
+    ptr=(int *) malloc(req*sizeof(int));
+    printf("Enter the %d numbers: ", req);
+    for(i=0; i<req; i++)
+        scanf("%d", &ptr[i]);
+    for(i=0; i<req; i++)
+        printf("%d\t", *(ptr+i));
+    free(ptr);
+    return 0;
+}
