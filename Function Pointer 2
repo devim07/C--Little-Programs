@@ -1,0 +1,31 @@
+//Function Pointer as a paprameter of a function
+#include <stdio.h>
+
+int call(int (*fp)(int), int no)
+{
+    int r=fp(no);
+    return r;
+}
+
+int n(int no)
+{
+    return no;
+}
+int s(int no)
+{
+    return (no*no);
+}
+int c(int no)
+{
+    return (no *no* no);
+}
+int main()
+{
+    int x;
+    printf("Enter any number: ");
+    scanf("%d", &x);
+    printf("The number is %d", call(n, x));
+    printf("\nThe square is %d", call(s,x));
+    printf("\nThe cube is %d", call(c,x));
+    return 0;
+}
