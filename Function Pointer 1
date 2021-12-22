@@ -1,0 +1,21 @@
+//Function Pointer
+#include <stdio.h>
+
+void s(int x)
+{
+    printf("\nHello: ");
+    printf("%d",x);
+}
+
+int main()
+{
+    int x;
+    void (*p)(int); //function pointer declaration
+    x=5;
+    p=s; //pointing function s    note:s(); calling
+    printf("\n%u",s);//print address of function definition
+    p(x); //calling method1
+    (*p)(x);////calling method2
+    s(x);//calling method3
+    return 0;
+}
